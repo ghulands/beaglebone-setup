@@ -6,9 +6,9 @@ COMPONENTS_FOLDER=$PWD/components
 mkdir -p $SOURCE
 export SOURCE=$SOURCE
 
-APT_GET_PACKAGES="git build-essential autoconf automake libtool pkg-config autopoint bison flex gtk-doc-tools libglib2.0-dev libxml2-dev libogg-dev libvorbis-dev libtheora-dev libv4l-dev v4l-utils liborc-0.4-dev libavformat-dev libavutil-dev libavcodec-dev"
+APT_GET_PACKAGES="git build-essential autoconf automake libtool pkg-config autopoint bison flex gtk-doc-tools libglib2.0-dev libxml2-dev libogg-dev libvorbis-dev libtheora-dev libv4l-dev v4l-utils liborc-0.4-dev libavformat-dev libavutil-dev libavcodec-dev liba52* libswcale-dev libusb-dev libgusb-dev"
+sudo apt-get install $APT_GET_PACKAGES
 
-echo "$1"
 if [ ! -z "$1" ]
 then
 	if [ ! -e "$SOURCE/$COMPONENT" ]
